@@ -1,10 +1,5 @@
 *, html, body{
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
+  user-select: none;
 }
 
 body{
@@ -16,18 +11,18 @@ body{
 .item{
   width:100px;
   height:100px;
-  border-radius: 3px;
+  border-radius: 6px;
   background-color: orange;
   margin: 5px;
   display:flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.6);
   font-size: 5em;
   font-family: Impact, sans-serif;
   font-weight: normal;
   position: relative;
-  transition: transform 50ms ease-in-out;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4)
 }
 
 .item:hover{
@@ -56,19 +51,19 @@ body{
   border:dashed brown 3px ;
 }
 
+hr{
+  clear:both;
+  color:orange;
+  border-color:orange;
+  border-width: 1px;
+  border-style: solid;
+  height:0px;
+}
+
 .target.start{
-  width:calc(100vw - 20px);
+  min-width:calc(100vw - 20px - 6px);
+  width:auto;
   clear:both;
   display:flex;
   flex-wrap: wrap;
-}
-
-.img1{
-  background-image: url("https://source.unsplash.com/random/110x110?x=100");
-}
-.img2{
-  background-image: url("https://source.unsplash.com/random/110x110?x=200");
-}
-.img3{
-  background-image: url("https://source.unsplash.com/random/110x110?x=300");
 }

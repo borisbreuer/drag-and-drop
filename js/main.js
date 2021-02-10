@@ -1,4 +1,4 @@
-class DragAnDrop {
+class DragnDrop {
   constructor(_item, _target){
     this.item = _item;
     this.target = _target;
@@ -107,7 +107,7 @@ class DragAnDrop {
 
 }
 
-const drag = new DragAnDrop("item", "target");
+const drag = new DragnDrop("item", "target");
 
 const itemSet = document.querySelectorAll(".item");
 for(let item of itemSet){
