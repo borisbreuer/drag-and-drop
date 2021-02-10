@@ -1,0 +1,74 @@
+*, html, body{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+body{
+  background: olivedrab;
+  padding: 0;
+  margin: 0;
+}
+
+.item{
+  width:100px;
+  height:100px;
+  border-radius: 3px;
+  background-color: orange;
+  margin: 5px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 5em;
+  font-family: Impact, sans-serif;
+  font-weight: normal;
+  position: relative;
+  transition: transform 50ms ease-in-out;
+}
+
+.item:hover{
+  border:1px solid rgba(255,255,255,0.5);
+  width:98px;
+  height:98px;
+}
+
+.item.draging{
+  position:absolute;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  z-index:10000;
+}
+
+.target{
+  float:left;
+  position: relative;
+  padding:0px;
+  margin:10px;
+  width:110px;
+  min-height:110px;
+  border: solid darkorange 3px
+}
+
+.target.hover{
+  border:dashed brown 3px ;
+}
+
+.target.start{
+  width:calc(100vw - 20px);
+  clear:both;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.img1{
+  background-image: url("https://source.unsplash.com/random/110x110?x=100");
+}
+.img2{
+  background-image: url("https://source.unsplash.com/random/110x110?x=200");
+}
+.img3{
+  background-image: url("https://source.unsplash.com/random/110x110?x=300");
+}
