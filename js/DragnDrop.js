@@ -1,4 +1,4 @@
-// Source: https://github.com/borisbreuer/drag-n-drop
+// Source: https://github.com/borisbreuer/drag-and-drop
 /**
  * ES6 Version.
  * @author    Boris Breuer <mail@borisbreuer.de>

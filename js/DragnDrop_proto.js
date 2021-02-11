@@ -1,4 +1,4 @@
-// Source: https://github.com/borisbreuer/drag-n-drop
+// Source: https://github.com/borisbreuer/drag-and-drop
 /**
  * At least workink with IE11 or higher.
  * @author    Boris Breuer <mail@borisbreuer.de>
@@ -10,7 +10,7 @@ function DragnDrop(_item, _target) {
 
     this.item = _item;
     this.target = _target;
-    
+
     this.dragItems = document.querySelectorAll( "." + this.item );
     this.overItems = document.querySelectorAll( "." + this.target );
 
