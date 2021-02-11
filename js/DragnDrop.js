@@ -1,3 +1,11 @@
+// Source: https://github.com/borisbreuer/drag-n-drop
+/**
+ * ES6 Version.
+ * @author    Boris Breuer <mail@borisbreuer.de>
+ * @copyright Released under the MIT License <https://opensource.org/licenses/MIT>
+ * @version   1.0
+ */
+
 class DragnDrop {
   constructor(_item, _target){
     this.item = _item;
@@ -5,24 +13,6 @@ class DragnDrop {
     
     this.dragItems = document.querySelectorAll("." + this.item );
     this.overItems = document.querySelectorAll("." + this.target);
-
-    this.dItem = null;
-    this.oItem = null;
-    this.targetX = null;
-    this.targetY = null;
-    this.mouseX = null;
-    this.mouseY = null;
-    this.originX = null;
-    this.originY = null;
-    this.rect = null;
-    this.rectParent = null;
-    this.dragTarget = null;
-    this.overTarget = null;
-    this.offsetX = null;
-    this.offsetY = null;
-    this.offsetBorder = null;
-    this.value = null;
-    this.isOver = false;
 
     this.registerDragables();
     this.preventImageDrag();

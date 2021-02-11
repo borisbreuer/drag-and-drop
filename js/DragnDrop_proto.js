@@ -1,26 +1,18 @@
+// Source: https://github.com/borisbreuer/drag-n-drop
+/**
+ * At least workink with IE11 or higher.
+ * @author    Boris Breuer <mail@borisbreuer.de>
+ * @copyright Released under the MIT License <https://opensource.org/licenses/MIT>
+ * @version   1.0
+ */
+
 function DragnDrop(_item, _target) {
 
     this.item = _item;
     this.target = _target;
-    this.dragItems = window.document.querySelectorAll( "." + this.item );
-    this.overItems = window.document.querySelectorAll( "." + this.target );
-    this.dItem = null;
-    this.oItem = null;
-    this.targetX = new Number;
-    this.targetY = new Number;
-    this.mouseX = null;
-    this.mouseY = null;
-    this.originX = null;
-    this.originY = null;
-    this.rect = null;
-    this.rectParent = null;
-    this.dragTarget = null;
-    this.overTarget = null;
-    this.offsetX = null;
-    this.offsetY = null;
-    this.offsetBorder = null;
-    this.value = null;
-    this.isOver = false;
+    
+    this.dragItems = document.querySelectorAll( "." + this.item );
+    this.overItems = document.querySelectorAll( "." + this.target );
 
     this.registerDragables();
     this.preventImageDrag();
