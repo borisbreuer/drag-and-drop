@@ -1,6 +1,6 @@
 # Drag and Drop
  
-A simple drag and drop without dragevents to avoid the ghost item.
+A simple drag and drop without drag events to avoid the ghost item.
 
-## Supporting older versions with Constructor Function and prototype
-tested on IE11
+### Supporting older Browser versions with Constructor Function and prototype
+Tested on IE11
