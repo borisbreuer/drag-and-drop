@@ -2,24 +2,26 @@ class DragnDrop {
   constructor(_item, _target){
     this.item = _item;
     this.target = _target;
+    
     this.dragItems = document.querySelectorAll("." + this.item );
     this.overItems = document.querySelectorAll("." + this.target);
-    this.dItem;
-    this.oItem;
-    this.targetX;
-    this.targetY;
-    this.mouseX;
-    this.mouseY;
-    this.originX;
-    this.originY;
-    this.rect;
-    this.rectParent;
-    this.dragTarget;
-    this.overTarget;
-    this.offsetX;
-    this.offsetY;
-    this.offsetBorder;
-    this.value;
+
+    this.dItem = null;
+    this.oItem = null;
+    this.targetX = null;
+    this.targetY = null;
+    this.mouseX = null;
+    this.mouseY = null;
+    this.originX = null;
+    this.originY = null;
+    this.rect = null;
+    this.rectParent = null;
+    this.dragTarget = null;
+    this.overTarget = null;
+    this.offsetX = null;
+    this.offsetY = null;
+    this.offsetBorder = null;
+    this.value = null;
     this.isOver = false;
 
     this.registerDragables();
@@ -106,9 +108,7 @@ class DragnDrop {
   registerDragables(){
 
     for(this.dItem of this.dragItems){
-
       this.dItem.addEventListener("mousedown", this.down);
-
     }
 
   }
@@ -116,11 +116,8 @@ class DragnDrop {
   preventImageDrag(){
 
     const images = document.getElementsByTagName('img');
-
     for(let image of images){
-
       image.addEventListener("dragstart", (event) => event.preventDefault() )
-
     }
 
   }

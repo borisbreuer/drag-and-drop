@@ -1,4 +1,7 @@
 *, html, body{
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none; 
   user-select: none;
 }
 
@@ -25,7 +28,9 @@ body{
   font-family: Impact, sans-serif;
   font-weight: normal;
   position: relative;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.4)
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  cursor: pointer;
+  cursor: grab;
 }
 
 .item:hover{
@@ -36,8 +41,10 @@ body{
 
 .item.draging{
   position:absolute;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
   z-index:10000;
+  cursor: move;
+  cursor: grabbing;
 }
 
 .target{
