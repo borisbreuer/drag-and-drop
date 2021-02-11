@@ -9,9 +9,12 @@ body{
 }
 
 .item{
+  left: initial;
+  right:initial;
   width:100px;
   height:100px;
   border-radius: 6px;
+  background: center center no-repeat ;
   background-color: orange;
   margin: 5px;
   display:flex;
