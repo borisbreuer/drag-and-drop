@@ -12,7 +12,7 @@ class TableSort{
 
     this.item = _item;
     this.target = _target;
-    
+
     this.dragControl = document.querySelectorAll(this.item);
     this.overItems = document.querySelectorAll(this.target);
 
@@ -29,28 +29,28 @@ class TableSort{
 
       this.overTarget = this.oItem.getBoundingClientRect();
       this.phRect = this.placeHolder.getBoundingClientRect();
-      
+
       this.isOverPH = this.mouseY > this.phRect.top && this.mouseY < this.phRect.bottom;
       this.isOverAll = this.mouseY > this.overTarget.top && this.mouseY < this.overTarget.bottom;
       this.isOverTop = this.mouseY > this.overTarget.top && this.mouseY < this.overTarget.bottom - this.overTarget.height / 5;
       this.isOverBottom = this.mouseY > this.overTarget.top + (this.overTarget.height / 5) * 4 && this.mouseY < this.overTarget.bottom;
-      
+
       if(this.isOverAll && isMoving && this.dragTarget != this.oItem ) {
-        
+
         this.oItem.classList.add('hover');
-        
+
         if(this.isOverTop) { 
           this.oItem.parentNode.insertBefore(this.placeHolder, this.oItem);
         } 
-        
+
         if(this.isOverBottom && this.oItem.nextElementSibling) {
           this.oItem.parentNode.insertBefore(this.placeHolder, this.oItem.nextElementSibling);
         }
-        
+
         if(this.isOverBottom && !this.oItem.nextElementSibling) {
           this.oItem.parentNode.appendChild(this.placeHolder);
         }
-        
+
       } else if (this.isOverAll && !isMoving) {
 
         /*
@@ -92,7 +92,7 @@ class TableSort{
 
     this.dragTarget.style.width = Math.round(this.rect.width) + "px";
     this.dragTarget.style.height = Math.round(this.rect.height) + "px";
-    
+
     this.placeHolder.style.width = Math.round(this.rect.width) + "px";
     this.placeHolder.style.height = Math.round(this.rect.height) + "px";
 
@@ -113,7 +113,7 @@ class TableSort{
     this.dragTarget.removeAttribute('style');
 
     if(this.placeHolder.parentNode) this.placeHolder.parentNode.removeChild(this.placeHolder);
-    
+
     this.setSortingData();
 
     window.removeEventListener("mousemove", this.move);
@@ -154,6 +154,7 @@ class TableSort{
   }
 
   createPlaceHolderElement(){
+
     const tdCount = document.querySelector(this.target).querySelectorAll('td');
     const tempEl = document.createElement('tr');
 
@@ -177,10 +178,12 @@ class TableSort{
   }
 
   setSortingData(){
+
     let dataSetObjects = document.querySelectorAll(this.target);
     for(let i = 0; i < dataSetObjects.length; i++){
       dataSetObjects[i].dataset.order = i+1;
     }
+
   }
 
 }
