@@ -1,0 +1,104 @@
+*, html, body{
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
+
+body{
+  background: olivedrab;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper{
+  margin: 20px;
+  position: relative;
+}
+
+table{
+  border-spacing: 0;
+  border-collapse: separate;
+  border: 0px solid orange;
+  width: 80%;
+  margin:0;
+}
+
+tbody{
+  width:80%;
+}
+
+td{
+  margin:0;
+  background-color: orange;
+  width: 33%;
+  padding: 10px;
+
+  border-top:rgba(255, 255, 255, 0.30) 1px solid;
+  border-bottom: rgba(0, 0, 0, 0.10) 1px solid;
+}
+
+.placeholder{
+  background-color: rgba(255, 165, 0,0.3);
+  display:table-row;
+}
+
+.placeholder td{
+  background-color: transparent;
+  border: none;
+}
+
+
+tr.drag-item{
+  position: relative;
+  color: rgba(255,255,255,0.6);
+  font-size: 2em;
+  font-family: Calibri;
+  
+}
+
+tr.drag-item:hover{
+  /* border: 1px solid rgba(255,255,255,0.5); */
+}
+
+tr.drag-item.draging{
+  position: absolute;
+  opacity: 0.5;
+  width: 50%;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  z-index: 10000;
+}
+
+td.dragecontrol{
+  width: auto;
+}
+td.dragecontrol span:hover{
+  color: rgba(255,255,255,1);
+}
+tr.drag-item > td.dragecontrol span{
+  cursor: pointer;
+  cursor: grab;
+}
+tr.drag-item.draging > td.dragecontrol span,
+body.draging{
+  cursor: move;
+  cursor: grabbing;
+}
+
+tbody.target.hover{
+  border:dashed brown 3px ;
+}
+
+hr{
+  clear:both;
+  color:orange;
+  border-color:orange;
+  border-width: 1px;
+  border-style: solid;
+  height:0px;
+}
+
+.target.start{
+
+}

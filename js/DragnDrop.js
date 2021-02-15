@@ -7,15 +7,17 @@
  */
 
 class DragnDrop {
+
   constructor(_item, _target){
     this.item = _item;
     this.target = _target;
     
-    this.dragItems = document.querySelectorAll("." + this.item );
-    this.overItems = document.querySelectorAll("." + this.target);
+    this.dragItems = document.querySelectorAll(this.item );
+    this.overItems = document.querySelectorAll(this.target);
 
     this.registerDragables();
     this.preventImageDrag();
+
   }
 
   over = (isMoving) => {
